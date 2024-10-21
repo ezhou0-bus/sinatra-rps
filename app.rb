@@ -19,9 +19,7 @@ get("/app/rock") do
 
   if user_choice == computer_choice
     @outcome = "We tied!"
-  elsif (user_choice == "rock" && computer_choice == "scissors") ||
-        (user_choice == "paper" && computer_choice == "rock") ||
-        (user_choice == "scissors" && computer_choice == "paper")
+  elsif (user_choice == "rock" && computer_choice == "scissors")
     @outcome = "We won!"
   else
     @outcome = "We lost!"
@@ -31,4 +29,40 @@ get("/app/rock") do
   @computer_choice = computer_choice
 
   erb(:rock)
+end 
+
+get("/app/paper") do
+  user_choice = "paper"
+  computer_choice = ["rock", "paper", "scissors"].sample
+
+  if user_choice == computer_choice
+    @outcome = "We tied!"
+  elsif (user_choice == "paper" && computer_choice == "rock") ||
+    @outcome = "We won!"
+  else
+    @outcome = "We lost!"
+  end
+
+  @user_choice = user_choice
+  @computer_choice = computer_choice
+
+  erb(:paper)
+end 
+
+get("/app/scissors") do
+  user_choice = "scissors"
+  computer_choice = ["rock", "paper", "scissors"].sample
+
+  if user_choice == computer_choice
+    @outcome = "We tied!"
+  elsif (user_choice == "scissors" && computer_choice == "paper")
+    @outcome = "We won!"
+  else
+    @outcome = "We lost!"
+  end
+
+  @user_choice = user_choice
+  @computer_choice = computer_choice
+
+  erb(:scissors)
 end 
