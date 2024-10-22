@@ -3,25 +3,26 @@
   <head>
     <title>Sinatra RPS</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-     <style>
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-    }
+    <style>
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
 
   </head>
 
   <body>
-<div>
-    <div><a href="/rock">Play Rock</a></div>
-    <div><a href="/paper">Play Paper</a></div>
-    <div><a href="/scissors">Play Scissors</a></div>
-  </div>
+    <div>
+      <div><a href="/rock">Play Rock</a></div>
+      <div><a href="/paper">Play Paper</a></div>
+      <div><a href="/scissors">Play Scissors</a></div>
+    </div>
 
     <%= yield %>
 
-<div><a href="/home">Rules</a></div>
+    <div><a href="/home">Rules</a></div>
   </body>
 </html>
